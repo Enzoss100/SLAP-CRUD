@@ -8,7 +8,6 @@ $relativePath = $env['DB_PATH'] ?? '../database/app.db'; // fallback
 $absolutePath = realpath(__DIR__ . '/../../' . dirname($relativePath)) . '/' . basename($relativePath);
 $databasePath = $absolutePath ?: (__DIR__ . '../database/app.db');
 
-echo realpath($databasePath);
 
 $dir = dirname($databasePath);
 if (!file_exists($dir)) {
@@ -28,5 +27,8 @@ try {
 } catch (PDOException $e) {
     die("Database error: " . $e->getMessage());
 }
+
+
+echo realpath($databasePath);
 ?>
 
