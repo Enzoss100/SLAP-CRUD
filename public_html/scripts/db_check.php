@@ -29,6 +29,5 @@ try {
 }
 
 
-echo '<br>',realpath($databasePath);
 ?>
 
