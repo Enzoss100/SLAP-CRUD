@@ -1,6 +1,6 @@
 <?php
 // public_html/scripts/db_check.php
-require_once __DIR__ . '/env_parser.php';
+require_once __DIR__ . './env_parser.php';
 
 $env = parseEnv();
 $relativePath = $env['DB_PATH'] ?? '../database/app.db'; // fallback
