@@ -1,2 +1,2 @@
 .env
-/database/app.db
+./public_html/database/app.db
