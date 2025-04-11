@@ -5,8 +5,8 @@ include './env_parser.php';
 $env = parseEnv();
 $relativePath = $env['DB_PATH'] ?? '../database/app.db'; // fallback
 
-$absolutePath = realpath(__DIR__ . '/../../' . dirname($relativePath)) . '/' . basename($relativePath);
-$databasePath = $absolutePath ?: (__DIR__ . '../database/app.db');
+$absolutePath = realpath('/../../' . dirname($relativePath)) . '/' . basename($relativePath);
+$databasePath = $absolutePath ?: ('../database/app.db');
 
 
 $dir = dirname($databasePath);
