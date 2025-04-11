@@ -1,7 +1,7 @@
 <?php
 // public_html/scripts/env_parser.php
 
-function parseEnv($path = __DIR__ . '/../../.env') {
+function parseEnv($path = '../../.env') {
     $vars = [];
 
     if (!file_exists($path)) return $vars;

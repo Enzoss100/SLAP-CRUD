@@ -1,18 +1,18 @@
 <?php
 // public_html/scripts/db_check.php
-//require_once __DIR__ . '/env_parser.php';
+require_once './env_parser.php';
 
-//$env = parseEnv();
-//$relativePath = $env['DB_PATH'] ?? '../database/app.db'; // fallback
+$env = parseEnv();
+$relativePath = $env['DB_PATH'] ?? '../database/app.db'; // fallback
 
-//$absolutePath = realpath(__DIR__ . '/../../' . dirname($relativePath)) . '/' . basename($relativePath);
-//$databasePath = $absolutePath ?: (__DIR__ . '../database/app.db');
+$absolutePath = realpath(__DIR__ . '/../../' . dirname($relativePath)) . '/' . basename($relativePath);
+$databasePath = $absolutePath ?: (__DIR__ . '../database/app.db');
 
 
-//$dir = dirname($databasePath);
-//if (!file_exists($dir)) {
-    //mkdir($dir, 0755, true);
-//}
+$dir = dirname($databasePath);
+if (!file_exists($dir)) {
+	mkdir($dir, 0755, true);
+}
 
 try {
     $db = new PDO('sqlite:../database/app.db');
