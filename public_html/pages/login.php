@@ -1,6 +1,6 @@
 <?php
 // public_html/pages/login.php
-include_once '../scripts/db_check.php'; // sets up $db
+require_once '../scripts/db_check.php'; // sets up $db
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'] ?? '';

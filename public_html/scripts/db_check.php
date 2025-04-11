@@ -1,6 +1,6 @@
 <?php
 // public_html/scripts/db_check.php
-include './env_parser.php';
+require_once './env_parser.php';
 
 $env = parseEnv();
 $relativePath = $env['DB_PATH'] ?? '../database/app.db'; // fallback
@@ -9,10 +9,10 @@ $absolutePath = realpath('/../../' . dirname($relativePath)) . '/' . basename($r
 $databasePath = $absolutePath ?: ('../database/app.db');
 
 
-$dir = dirname($databasePath);
-if (!file_exists($dir)) {
-	mkdir($dir, 0755, true);
-}
+//$dir = dirname($databasePath);
+//if (!file_exists($dir)) {
+//	mkdir($dir, 0755, true);
+//}
 
 try {
     $db = new PDO('sqlite:../database/app.db');
