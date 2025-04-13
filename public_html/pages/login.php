@@ -1,7 +1,6 @@
 <?php
 // public_html/pages/login.php
 require_once '../scripts/db_check.php'; // sets up $db
-require_once '../scripts/env_parser.php'; // sets up $db
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'] ?? '';
