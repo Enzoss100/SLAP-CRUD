@@ -1,5 +1,5 @@
 <?php
-$dbPath = realpath('../database/app.sqlite');
+$dbPath = realpath('../database/app.db');
 
 try {
     $db = new PDO("sqlite:" . $dbPath);
