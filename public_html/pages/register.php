@@ -29,7 +29,8 @@ try {
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Register</title>
+	<title>Register</title>
+	<link rel="stylesheet" href="../css/registeruser.css">
 </head>
 <body>
     <h1>Register</h1>

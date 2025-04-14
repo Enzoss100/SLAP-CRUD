@@ -32,7 +32,8 @@ try {
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+	<title>Login</title>
+	<link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
     <h1>Login</h1>
